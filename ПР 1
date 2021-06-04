@@ -1,0 +1,94 @@
+№1
+import matplotlib.pyplot as plt
+import numpy as np 
+x = np.linspace(0,40,60)
+y = x*x
+plt.title("Зависимость y = x*x ")
+plt.xlabel("x")
+plt.ylabel("y")
+plt.grid()
+
+№2
+import matplotlib.pyplot as plt
+import numpy as np 
+x = np.linspace(0,40,60)
+y1 = np.sin(3*x)
+y2 = np.cos(x)
+plt.title("Зависимости: y1 = sin(3*x), y2 = cos(x)")
+plt.xlabel("x")
+plt.ylabel("y1,y2")
+plt.grid()
+plt.plot(x,y1,y2)
+
+№3
+import matplotlib.pyplot as plt
+import numpy as np 
+x = np.linspace(0,20,60)
+y1 = 4*x*x+26*x+9
+y2 = x
+plt.figure(figsize=(7,7))
+plt.subplot(4,1,1)
+plt.plot(x,y1)
+plt.title("Зависимости: y1 = 4*x*x+26*x+9, y2 = x")
+plt.ylabel("y1",fontsize=16)
+plt.grid(True)
+plt.subplot(4,1,4)
+plt.plot(x,y2)
+plt.xlabel("x",fontsize=16)
+plt.ylabel("y2",fontsize=16)
+plt.grid(True)
+
+№4
+import matplotlib.pyplot as plt
+countries = ["Russia", "Africa", "Asia", "Italy"]
+counts = [145,2,5,60]
+plt.bar(countries,counts)
+plt.title("Countries!")
+plt.xlabel("Countries")
+plt.ylabel("Count")
+
+№5
+import matplotlib.pyplot as plt
+import numpy as np
+x = [0,3,6,9]
+y = [0,5,8,11]
+plt.plot(x,y,label = 'the price of gold')
+plt.xlabel('Year',fontsize=14,color ='red')
+plt.ylabel('Price',fontsize=14,color ='red')
+plt.legend()
+plt.grid(True)
+plt.text(17,6,'grow up!')
+
+№6
+import matplotlib.pyplot as plt
+import numpy as np
+x = [1,2,3,4,10]
+y1 = [1,5,6,7,9]
+y2 = [i*8+1 for i in y1]
+y3 = [i*8+1 for i in y2]
+plt.plot(x,y1,':',x,y2,'-',x,y3,'--')
+
+№7
+import matplotlib.pyplot as plt
+import numpy as np
+x = [3,5,8]
+y = [3,8,15]
+plt.plot(x,y,'g*')
+
+№8
+import matplotlib.pyplot as plt
+import numpy as np
+x = [1,6,8,10]
+y1 = [1,5,7,9]
+y2 = [i**2 + 1 for i in y1]
+y3 = [i**2 + 1 for i in y2]
+y4 = [i**2 + 1 for i in y3]
+plt.figure(figsize=(20,1))
+plt.subplot(3,3,1)
+plt.plot(x,y1,'--')
+plt.subplot(3,3,3)
+plt.plot(x,y2,'-.')
+plt.subplot(3,3,5)
+plt.plot(x,y3,':')
+plt.subplot(3,3,6)
+plt.plot(x,y4,'-')
